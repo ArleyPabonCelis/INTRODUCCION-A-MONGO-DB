@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "64b7197edb0155a683cd42b6"
+  },
+  "nombre": "Alejandro Medina Villarreal",
+  "librosEscritos": "15",
+  "ocupacion": "Licenciado en Teología",
+  "nacionalidad": "Mexicano"
+},
+{
+  "_id": {
+    "$oid": "64b7276bdb0155a683cd42c2"
+  },
+  "nombre": "Ellen Gould Harmon",
+  "librosEscritos": "50",
+  "ocupacion": "Escritora Adventista",
+  "nacionalidad": "Estadounidense"
+},
+{
+  "_id": {
+    "$oid": "64b7276bdb0155a683cd42bf"
+  },
+  "nombre": "Gabriel Garcia Marquez",
+  "librosEscritos": "50",
+  "ocupacion": "Escritor",
+  "nacionalidad": "Colombiano"
+},
+{
+  "_id": {
+    "$oid": "64b7276bdb0155a683cd42c0"
+  },
+  "nombre": "Sergio Aguirre",
+  "librosEscritos": "20",
+  "ocupacion": "Escritor de novelas juveniles",
+  "nacionalidad": "Argentino"
+},
+{
+  "_id": {
+    "$oid": "64b7276bdb0155a683cd42c1"
+  },
+  "nombre": "Albeiro Echavarria",
+  "librosEscritos": "10",
+  "ocupacion": "Periodista y escritor",
+  "nacionalidad": "Colombiano"
+}]

@@ -1,0 +1,39 @@
+TALLER MONGODB 
+
+1. Ejercicio usando comandos NoSQL en MongoDB.
+
+- Crear una base de datos en MongoDB Compass desde el Shell de Mongo llamada librería. CUMPLIDO
+- Crear 3 colecciones llamadas: libros, editorial, autor. CUMPLIDO
+- Crear 5 documentos para cada colección. Hay dos formas, insertarlos uno por uno con insertOne, o todos al tiempo con insertMany.
+    * 5 documentos de la coleccion LIBROS -> CUMPLIDO -> Se insertaron uno por uno con insertOne
+    * 5 documentos de la coleccion EDITORIAL -> CUMPLIDO -> Se insertaron 2 datos con insertOne y 3 datos con insertMany
+    * 5 documentos de la coleccion AUTOR -> CUMPLIDO -> Se inserto 1 dato con inserOne para crear la coleccion y el resto con insertMany. 
+- Borrar la colección editorial. La borramos con -> db.editorial.drop() -> CUMPLIDO
+- Consultar las colecciones de la base de datos librería. -> CUMPLIDO 
+
+
+2. Ejercicio usando comandos NoSQL en MongoDB.
+
+- Crear una base de datos en MongoDB Compass desde el Shell de Mongo llamada superartemis
+- Convertir cada una de las tablas de la base de datos en mysql llamada facturartemis en su equivalente colección dentro de la base de datos mongo superartemis (Minimo 10 colecciones)
+- Crear 7 documentos para cada colección.
+- Agregar 2 parejas llave-valor a cualquier colección.
+
+
+ESTRUCTURAS
+
+categorias
+{"CategoriaNombre":"", "Descripcion":"", "Imagen":""}
+
+clientes
+{"ClienteID":"", "Compania":"", "Contacto":"", "Titulo":"", "Direccion":"", "Ciudad":"", "Regiones":"", "CodigoPostal":"", "Pais":"", "Telefono":"", "Fax":""}
+
+correos
+{"Compania":"", "Telefono":""},
+
+empleados
+{"Apellido":"", "Nombre":"", "Titulo":"", "TituloCortesia":"", "FechaNacimiento":"", "FechaContratacion":"", "Direccion":"", "Ciudad":"", "Regiones":"", "CodigoPostal":"", "Pais":"", "Telefono":"", "Extension":"", "Foto":"", "Notas":"", "Jefe":"", "RutaFoto":""}
+
+
+
+

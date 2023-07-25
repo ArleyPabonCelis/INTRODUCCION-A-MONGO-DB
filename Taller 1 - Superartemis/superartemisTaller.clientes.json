@@ -1,0 +1,160 @@
+[{
+  "_id": {
+    "$oid": "64b7d497127aec97a8d68283"
+  },
+  "Compania": "Alfreds Futterkiste",
+  "Contacto": "Maria Anders",
+  "Titulo": "Sales Representative",
+  "Direccion": "Obere Str. 57",
+  "Ciudad": "Berlin",
+  "Regiones": "",
+  "CodigoPostal": "12209",
+  "Pais": "Germany",
+  "Telefono": "030-0074321",
+  "Fax": "030-0076545",
+  "ClienteID": "ALFKI"
+},
+{
+  "_id": {
+    "$oid": "64b7d7c6127aec97a8d68284"
+  },
+  "ClienteID": "ANATR",
+  "Compania": "Ana Trujillo Emparedados y helados",
+  "Contacto": "Ana Trujillo",
+  "Titulo": "Owner",
+  "Direccion": "Avda. de la Constitucion 2222",
+  "Ciudad": "Mexico D.F.",
+  "Regiones": "",
+  "CodigoPostal": "05021",
+  "Pais": "Mexico",
+  "Telefono": "(5) 555-4729",
+  "Fax": "(5) 555-3745"
+},
+{
+  "_id": {
+    "$oid": "64b7d8be127aec97a8d68285"
+  },
+  "ClienteID": "ANTON",
+  "Compania": "Antonio Moreno Taqueria",
+  "Contacto": "Antonio Moreno",
+  "Titulo": "Owner",
+  "Direccion": "Mataderos 2312",
+  "Ciudad": "Mexico D.F.",
+  "Regiones": "",
+  "CodigoPostal": "05023",
+  "Pais": "Mexico",
+  "Telefono": "(5) 555-3932",
+  "Fax": ""
+},
+{
+  "_id": {
+    "$oid": "64b7d94d127aec97a8d68286"
+  },
+  "ClienteID": "AROUT",
+  "Compania": "Around the Horn",
+  "Contacto": "Thomas Hardy",
+  "Titulo": "Sales Representative",
+  "Direccion": "120 Hanover Sq",
+  "Ciudad": "London",
+  "Regiones": "",
+  "CodigoPostal": "WA1 1DP",
+  "Pais": "UK",
+  "Telefono": "(171) 555-7788",
+  "Fax": "(171) 555-6750"
+},
+{
+  "_id": {
+    "$oid": "64b7da3f127aec97a8d68287"
+  },
+  "ClienteID": "BERGS",
+  "Compania": "Berglunds snabbkop",
+  "Contacto": "Christina Berglund",
+  "Titulo": "Order Administrator",
+  "Direccion": "Berguvsvagen 8",
+  "Ciudad": "Lulea",
+  "Regiones": "",
+  "CodigoPostal": "S-958-22",
+  "Pais": "Sweden",
+  "Telefono": "0921-12-3465",
+  "Fax": "0921-12-3467"
+},
+{
+  "_id": {
+    "$oid": "64b7dae2127aec97a8d68288"
+  },
+  "ClienteID": "BLAUS",
+  "Compania": "Blauer See Delikatessen",
+  "Contacto": "Hanna Moos",
+  "Titulo": "Sales Representative",
+  "Direccion": "Forsterstr. 57",
+  "Ciudad": "Mannheim",
+  "Regiones": "",
+  "CodigoPostal": "68306",
+  "Pais": "Germany",
+  "Telefono": "0621-08460",
+  "Fax": "0621-08924"
+},
+{
+  "_id": {
+    "$oid": "64b7dc6f127aec97a8d68289"
+  },
+  "ClienteID": "BLONP",
+  "Compania": "Blondesddsl pere et fils",
+  "Contacto": "Frederique Citaux",
+  "Titulo": "Marketing Manager",
+  "Direccion": "24, place Kleber",
+  "Ciudad": "Strasbourg",
+  "Regiones": "",
+  "CodigoPostal": "67000",
+  "Pais": "France",
+  "Telefono": "88.60.15.31",
+  "Fax": "88.60.15.32"
+},
+{
+  "_id": {
+    "$oid": "64b7dd47127aec97a8d6828a"
+  },
+  "ClienteID": "BOLID",
+  "Compania": "Belindo Comidad preparadas",
+  "Contacto": "Martin Sommer",
+  "Titulo": "Owner",
+  "Direccion": "C/ Araquil, 67",
+  "Ciudad": "Madrid",
+  "Regiones": "",
+  "CodigoPostal": "28023",
+  "Pais": "Spain",
+  "Telefono": "(91) 555 2282",
+  "Fax": "(91) 555 91 99"
+},
+{
+  "_id": {
+    "$oid": "64b7de0e127aec97a8d6828b"
+  },
+  "ClienteID": "BONAP",
+  "Compania": "Bon app'",
+  "Contacto": "Laurence Lebihan",
+  "Titulo": "Owner",
+  "Direccion": "12, rue des Bouchers ",
+  "Ciudad": "Marseille",
+  "Regiones": "",
+  "CodigoPostal": "13008",
+  "Pais": "France",
+  "Telefono": "91.24.45.40",
+  "Fax": "91.24.45.41"
+},
+{
+  "_id": {
+    "$oid": "64b7df1c127aec97a8d6828c"
+  },
+  "ClienteID": "BOTTM",
+  "Compania": "Bottom-Dollar Markets",
+  "Contacto": "Elizabeth Lincol",
+  "Titulo": "Accouting Manager",
+  "Direccion": "23 Tsawassen",
+  "Ciudad": "Tsawassen",
+  "Regiones": "BC",
+  "CodigoPostal": "T3F 8M-4",
+  "Pais": "Canada",
+  "Telefono": "(604) 555-4729",
+  "Fax": "(604) 555-3745"
+}]

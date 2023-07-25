@@ -1,0 +1,102 @@
+---------------------------------------------------- MongoDB ----------------------------------------------------
+
+MongoDB es un sistema de bases de datos NoSQL, orientado a documentos y de código abierto.
+
+En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos JSON con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
+
+El modelo de documentos de MongoDB resulta muy fácil de aprender y usar, y proporciona a los desarrolladores todas las fucionalidades que necesitan para satisfacer los requisitos más complejos a cualquier escala. Se proporcionan drivers para más de diez lenguajes, y la comunidad ha desarrollado varias decenas más.
+
+
+-------------- ¿QUÉ ES MONGODB?  --------------
+
+Es una base de datos de documentos con la escalabilidad y flexibilidad que desea con la consulta e indexación que necesitas.
+
+
+-------------- CARACTERÍSTICAS CLAVE DE MONGODB  --------------
+
+- Basado en documentos: MongoDB almacena datos en documentos (estructuras de datos de pares de valor de campo, NoSQL)
+- Escalable: muyfácil de distribuir datos entre varias máquinas a medida que crecen los usuarios y la cantidad de datos.
+- Flexible: no se requiere un esquema de datos del documento, por lo que cada documento puede tener un número y tipo de campos diferente.
+- Rendimiento: modelos de datos integrados, indexación, fragmentación, documentos flexibles, duplicación nativa, etc.
+- Gratis y código abiert, publicado bajo la Licencia SSPL.
+- DATABASES ---> COLLECTIONS ---> DOCUMENTS
+
+
+
+---------------------------------------------------- Operaciones CRUD ----------------------------------------------------
+
+Las operaciones CRUD crean, leen, actualizan y eliminan documentos.
+
+
+-------------- Crean Operaciones "INSER ONE ; INSERT MANY" --> Equivalente al "INSERT INTO"  --------------
+
+Las operaciones de creación o inserción agregan nuevos documentos a una colección. Si la colección no existe, las operaciones de creación también crean la colección.
+Puede insertar un solo documento en una sola operación.
+
+
+-------------- Leer Operaciones "FIND" --> Equivalente al "SELECT" --------------
+
+Las operaciones de lectura recuperan documentos de una colección; es decir, consultar una colección de doucumentos.
+Puede especificar criterios o filtros que identifiquen los doucumentosa devolver.
+
+
+-------------- Actualizar Operaciones "FIND" --> Equivalente al "SELECT" --------------
+
+Las operaciones de actualizacion modifican los documentos existentes en una colección. Puede utilizar un solo documento o varios documentos en una sola operación.
+Puede especificar criterios o filtros que identifiquen los documentos a actualizar. Estos filtros utilizan la misma sintaxis que las operaciones de lectura. 
+
+
+-------------- Eliminar Operaciones "FIND" --> Equivalente al "SELECT" --------------
+
+Las operaciones de eliminación eliminan documentos existentes de una colección. Puede eliminar un solo documento o varios documentos en una sola operación.
+Puede especificar criterios o filtros que identifiquen los documentos que se eliminarán. Estos filtros utilizan la misma sintaxis que las operaciones de lectura.
+
+
+
+------------------------------------------ FUNCIONES CRUD ------------------------------------------
+
+Las funciones para Crear, Consutar, Actualizar y Eliminar tienen la siguiente sintaxis:
+
+**************  Nombre_basedatos.nombre_coleccion.funcionCRUD **************
+
+MongoDB tienen funciones que permiten realizar las funciones CRUD de forma masiva o única.
+
+
+
+--------------------------------------- ¿QUÉ ES UN JSON? ---------------------------------------
+
+Para responder qué es JSON, debemos empezar por decir que sus siglas en ingles son: JavaScript Object Notation. Se trata de un formato para guardar e intercambiar información que cualquier persona pueda leer. Los archivos JSON contienen solo texto y usan la extension .json. JSON es un formato que almacena información estructurada y se utiliza principalmente para transferir datos entre un servidor y un cliente.
+
+Hay dos elementos centrales en un objeto JSON: clabes(Keys) y valores(Values). 
+
+- KEYS : deben ser cadenas de caracteres (strings). Como su nombre en español lo indica, estas contienen una secuencia de caracteres rodeados de comillas.
+- VALUES : son un tipo de datos JSON válido. Puede tener la forma de un arreglo (array), objeto, cadena (string), booleano, número o nulo.
+- Un objeto JSON comienza y termina con llaves {}. Puede tener dos o más pares de claves/valor dentro, con una coma para separarlos. Así mismo, cada key es seguida por dos puntos para distinguirla del valor.
+- Ejemplo : {"ciudad" : "Nueva York" , "pais" : "Estados Unidos"}
+
+
+
+--------------------------- ESTRUCTURA DEL DOCUMENTO ---------------------------
+
+-------------- BSON --------------
+
+Formato de datos que utiliza MongoDB para el almacenamiento de datos. Como JSON, pero escrito. Entonces se escribe los documentos MongoDB.
+
+Incrustación / desnormalización : inclusión de datos relacionados en un solo documento. Esto permite un acceso más rápido y modelos de datos más fáciles (Aunque no siempre es la mejor solución).
+
+
+
+----------------------------- MONGOOSE -----------------------------
+
+-------------- ¿Qué es y para que se usa? --------------
+
+- Es una biblioteca de modelado de datos de objetos (ODM) para MongoDB y Node.js, un mayor nivel de abstracción.
+- Mongoose allows for rapid and simple development of MongoDB database interactions
+- Features: schemas to model data and relationships, easy data validation, simple query API, middleware, etc,.
+- Mongoose schema: where we model our data, by describing the structure of the data, default values, and validation.
+- Mongoose model: a wrapper for the schema, providing an interface to the database for CRUD operations.
+
+
+QUEDE EN EL MIN 36
+
+

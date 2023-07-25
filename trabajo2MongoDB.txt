@@ -1,0 +1,63 @@
+////////// MongoDB - find - replaceOne - updateOne - updateMany - Introducción a MongoDB \\\\\\\\\\
+
+
+1. Exportar datos de una base de datos (guardar los datos en un archivo json), trabajo en "MongoDB Compass".
+    1.1. En la parte izquierda, seleccionar la base de datos que deseemos.
+    1.2. Darle clic en el boton "Connect", para poder entrar a la base de datos seleccionada.
+    1.1. Abrir la carpeta de los datos que queremos exportar.
+    1.2. Casi en la mitad de la página hay un select "EXPORT DATA", seleccionamos "Export the full collection", donde va a aparecer un modal.
+    1.3. En "Export File Type" seleccionamos "JSON". 
+    1.4. Damos clic a "Export", debe aparecer una ventada de "Explorador windows".
+    1.5. Guardamos el archivo con el nombre que se desee.  
+
+
+2. Crear una nueva databases en "FacturartemisV2"
+    2.1. Vemos en frente de "Databases" un botoncito "+", damos clic para abrir un modal y poder crear una nueva base de datos.
+    2.2. Llenamos la información que nos pide el modal. (Name: superartemis, Collections Name: categorias)
+    2.3. Damos clic en el boton "Create Database"
+    2.4. Se observa en el menu de la izquierda, la nueva base de datos.
+
+
+3. Trabajo en "Atlas" 
+    3.1. Vamos al inico de la página, lo podemos hacer dandole clic al logo de "Atlas" en la parte superior izquierda.
+    3.2. Entramos a "facturartemisV2"
+    3.3. En frente de facturartemisV2Cluster, hay unos botones, le damos clic a Browes Collections. 
+    3.4. Vemos que se refresca solo, y en caso de que tenga una base de datos, se deben observar los documentos de la base de datos.
+    3.5. En caso que no tenga base de datos, Me debe mostrar "EXPLORE YOUR DATA!"
+
+
+4. Importar datos a una base de datos.
+    4.1. Casi en la mitad de la página hay un select "ADD DATA", seleccionamos "Import JSON or CSV file", donde se abre el Explorador de Archivos.
+    4.2. Seleccionamos el archivo de la bases de datos nueva, en este caso "SuperartemisDB.categorias.json"
+    4.3. Damos clic en el boton "Import".
+    4.4. Me aparecen los datos del archivo, sus objetos con el _id, imagen, etc.
+
+
+5. Consola de MongoDB - Jugando con el find()
+    5.1. Escribimos "use SuperartemisDB" para trabajar en esa base de datos y le damos enter.
+    5.2. "db.categorias.find()" -> Me lista todos los documentos que tenemos en categorias
+    5.3. "db.Categorias.find({"nombre":"Juegos"})" -> Me lista todos los documentos que tienen el "nombre: Juegos"
+    5.4. MongoDB es KeySensitive, distingue mayúsculas de minúsculas, por ejemplo en el punto anterior (5.3) si ponemos "juegos", MongoDB no encuentra ningun documento con ese nombre.
+    5.5. "db.Categorias.find({"nombre":"Juegos"},{"descripcion":0})" -> Me lista todos los documentos que tienen el "nombre: Juegos", pero los documentos me aparecen sin la "descripcion", es como si me eliminara ese valor.
+    5.6. "db.Categorias.find({"nombre":"Juegos"},{"descripcion":0, "nombre":0})" ->  Me lista todos los documentos que tienen el "nombre: Juegos", pero los documentos me aparecen sin la "descripcion" y sin el "nombre", todo lo que quiero quitar o eliminar van dentro de las mismas llaves {}.
+    5.7. "db.Categorias.find().count()" -> Me dice cuantos documentos tengo en Categorias. 
+    5.8. "db.Categorias.find().limit(2)" -> De todos los documentos que tengo me los limita. En este caso solo me muestra 2 datos. Depende del numero que se ponga en el () del "limit".
+
+
+6.  Consola de MongoDB - replaceOne()
+    6.1. "db.Categorias.replaceOne({"descripcion":"Ropa para mujer"}, {"descripcion":"Ropa para mujeres Santandereanas"})" -> Me permite editar el valor de una llave, donde primero debo copiar la llave y el valor actual y despues la llave y el valor modificado. Verifico el cambio con "db.Categorias.find()". Se puede ver que los demás valores fueron eliminados (nombre, imagen)
+    6.2. "db.Categorias.replaceOne({"nombre":"Ferreteria"}, {"anio":2021})" -> Me permite agregar un nuevo valor, el primero es el documento al que le quiero agregar le nuevo valor, el segundo es el nuevo valor. Verifico el cambio con "db.Categorias.find()". Se puede ver que los demás valores fueron eliminados (nombre, imagen, descripcion)
+
+
+7. Consola de MongoDB - updateOne()
+    7.1. "db.Categorias.updateOne({"nombre":"Electrodomesticos"}, {$set:{nombre:"Electrodomesticos", stock:5}})" -> Me agrega una nueva llave con un nuevo valor a la categoria de "Electrodomesticos". Verifico el cambio con "db.Categorias.find()". Se puede ver que se agrega un nueva llave-valor sin eliminar el resto.
+    7.2. Realizamos lo mismo para la llave "Juegos".
+
+
+8. Consola de MongoDB - updateMany()
+    8.1. "db.Categorias.updateMany({stock:5}, {$set:{stock:5}, $inc:{cantidad:2}})" -> Actualizacion de todos los que contienen la llave del primer parametro, $set=me permite dejar las llaves actuales y $inc=me incluye una nueva llave. set e inc van en las mismas {}. Verifico el cambio con "db.Categorias.find()"
+    8.2. Si utilizo el mismo codigo anterior pero con "updateOne()" solo me actualizara el primer documento que encuentere con la llave del primer parametro. Por ejemplo: "db.Categorias.updateOne({stock:5}, {$set:{stock:5}, $inc:{inventario:2}})"
+
+
+9. Actualizaciones "Atlas"
+    9.1. Si vamos a "Atlas" del navegador y actualizamos, tambien podemos evidenciar los cambios que hemos estado realizando.

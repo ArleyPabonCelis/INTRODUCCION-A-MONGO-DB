@@ -1,0 +1,130 @@
+////////// MongoDB - insertOne - insertMany - Introducción a MongoDB ATLAS y MongoDB COMPASS \\\\\\\\\\
+
+CREACION DE UN CLUSTER Y UNA BASE DE DATOS NoSQL EN LA NUBE AMAZON WEB SERVICES
+
+1. Ingresar al siguiente link "https://account.mongodb.com/account/login", es para registrarnos en Mongo Atlas. Atlas es ese environment de la nube  en el cual yo voy a gestionar toda la base de datos MongoDB.
+
+
+2. Procedemos a registrarnos o si ya tenemos la cuenta, entramos a ella.
+
+
+3. Una vez dentro le damos clic al logo de "Atlas" que esta en la parte superior izquierda. Vemos que nos aparece de "Proyectos".
+
+
+4. Crear un nuevo proyecto.
+    4.1. Damos clic en el boton verde que esta en la parte superior derecha.    
+    4.2. Le colocamos el siguiente nombre "facturartemisV2".
+    4.3. Damos clic en "Próximo" o "Next".
+    4.4. Damos clic en "Próximo" o "Create Proyect" o "Next".
+    4.5. Damos clic en "Build a Database"
+    4.6. Seleccionamos la opcion MO FREE, ya que no vamos a pagar, escogemos la opcion gratis. 
+    4.7. Bajamos y vemos que hay diferecntes secciones. 
+        4.7.1. En la sección "Provider", vamos a selecionar AWS (Amazon Web Services)
+        4.7.2. En la sección "Region", dejamos la opción que esta por defecto.
+        4.7.3. En la sección "Name", colocamos el nombre "facturartemisV2Cluster"
+    4.8. Damos clic en el boton verde "Create" (aveces hay que validar la información seleccionando imágenes), esperamos un momento que se cargue la base de datos en la nube.
+    4.9. Llemos los datos de Username y Password
+        4.9.1. Username -> "artemis"
+        4.9.2. Password -> "12345"
+        4.9.3. Damos clic en el boton "Create User"
+    4.10. Bajamos un poquito y dejamos seleccionado "My Local Environment"
+    4.11. Bajamos y le damos clic al boton verde "Finish and Close"
+    4.12. Nos aparece un modal y le damos clic al boton verde "Go to Database"
+
+
+5. Capturar la cadena de conexión a nuestra base de datos
+    5.1. En la mitad de la página esta el nombre de la sección (4.7.3), le damos clic al boton "Connect" que esta frente al nombre y nos abre un modal.
+    5.2. Seleccionamos la opción "Compass"
+    5.3. En el punto 1. (Si ya lo tiene descargado puede omitir este paso)
+        5.3.1. Seleccionamos el sistema operativo
+        5.3.2. Descargamos MongoDB Compass
+    5.4. En el punto 2. Copiamos el link que esta ahí. Y le damos "Close" al modal.
+
+
+6. Abrir la base de datos en el MongoDB Compass
+    6.1. Vamos al escritorio o buscamos en windows MongoDB Compass y lo abrimos.
+    6.2. Si ya lo hemos usado antes, le damos clic en "New Connection", de lo contrario ya se nos abre en una conexión nueva.
+    6.3. Borramos la URL que esta en el cuadro.
+    6.4. Pegamos el link del "Atlas", el link que copiamos en el punto 5.4
+    6.5. Del link que pegamos, vamos a borrar "<password>", y la reemplazamos por la contraseña que pusimos en el punto 4.9.2
+    6.6. En la parte de arriba en el centro a la derecha, hay una estrella que debajo dice "FAVORITE" vamos a hacer lo siguiente:
+        6.6.1. Le damos clic a "FAVORITE" y me debe aparecer un modal.
+        6.6.2. Agregamos el nombre "FacturartemisV2".
+        6.6.3. Escogemos el color que deseemos.
+        6.6.4. Le damos clic en "Save".
+    6.7. En la parte de abajo en el centro a la derecha, le damos clic en el boton verde "Connect", y vemos la página "MongoDB Compass - FacturartemisV2"
+
+
+7. Volvemos al "Atlas" en el navegador  
+    7.1. En la parte izquierda hay un menu, buscamos "Network Access" y le damo clic
+    7.2. Por defecto esta la direccion IP del lugar donde estas desarrollando este código
+        7.2.1. Vamos a "Actions" y le damos clic en "EDIT", donde nos va a abrir un modal.
+        7.2.2. Le damos clic al boton "ALLOW ACCESS FROM ANYWHERE".
+    7.3. Le damos clic en "Confirm", y esperamos hasta que en "Status" aparezca "Active".
+
+
+8. Volvemos a "MongoDB Compass - FacturartemisV2"
+    8.1. En la parte superior en el menú, damos clic en "Connect", y se despliegan algunas opciones.
+    8.2. Le damos clic a "Disconnect", y nos llevará a la página inicial.
+    8.3. Le damos clic en "Connect" (Paso 6.7)
+
+
+9. Consola de MongoDB - Crear libreria e insertar un dato
+    9.1. Para abrir la consola le damos clic al boton ">_MONGOSH" que esta en la parte inferior izquierda, en toda la esquina.
+    9.2. Lo primero que vamos a escribir es "show dbs", me aparecera dos bases de datos "admin" y "local", que son las que aparecieron por defecto en el menu de la izquierda de la pagina
+    9.3. Ahora escribiremos "use libreria", nos aparece el mensaje "switched to db libreria"
+    9.4. Creación de la db "libreria"
+        9.4.1. Escribimos "db.libro.insertOne({"nombre":"100 años de soledad", "autor":"Gabriel Garcia Marquez"})" le damos enter, vemos que automaticamente MongoDB le asigna su ObjectID
+
+
+10. Revision de lo que hemos creado en la consola
+    10.1. En el menu de la izquierda, donde dice "Databases", en frente hay un icono de "recargar", le damos clic, y vemos que nos aparece la nueva base de datos "libreria"
+    10.2. Le damos clic a la flechita que esta a la izquierda de "libreria" y vemos que nos aparece una coleccion llamada "libro",
+    10.3. Le damos clic a la carpeta "libro" donde veremos los documentos que hemos ingresados.
+
+
+11. Consola de MongoDB - Visualización de las librerias
+    11.1. Escribimos "show collections" le damos enter, nos debe aparecer la colección "libro"
+
+
+12. Consola de MongoDB - Agregar varios datos a la libreria todos dentro de un array
+    12.1. Escribimos "db.libro.insertMany([{"nombre":"Don Quijote", "autor":"Miguel Cervantes", "premios":"Panamericano"}, {"nombre":"La Odisea", "autor":"Simpson"}, {"nombre":"El principito", "autor":"Saint"}])" y al darle enter, nos aparecen los 3 objetos insertados y podemos ver el ObjectID de cada uno.
+
+
+13. En "libreria.libro" de MongoDB Compass, en la parte derecha buscamos el boton "Refresh documents" con un simbolo de recargar, le damos clic y nos aparecen los nuevos datos que ingresamos en la consola de MongoDB.
+    13.1. Notamos que no hay problema porque agregemos un dato mas a uno de los objetos, en el caso de "premios" que solo un objeto tiene este dato. Ya que MongoDB no esta sujeto a los modelos de entidades relación. 
+
+
+14. Consola de MongoDB - Eliminar base de datos.
+    14.1. Escribimos "db.dropDatabase()" le damos enter y nos debe aparecer el siguiente mensaje: "MongoServerError: user is not allowed to do action [dropDatabase] on [libreria.]".
+
+
+15. Vamos a MongoDB Compass
+    15.1. Le damos clic a "Databases" en el menú de la izquierda.
+    15.2. Poniendo el mouse encima de la base de datos "libreria" nos aparece un icono de eliminar en la parte derecha, le damos clic y aparece un modal.
+    15.3. Escribimos "libreria" y le clic en "Drop Database"
+    15.4. Aparece el siguiente mensaje: "user is not allowed to do action [dropDatabase] on [libreria.]"
+
+
+16. Vamos a Atlas, en el navegador.
+    16.1. En el menú de la izquierda, buscamos y le damos clic a "Database Access", ahí podemos el usuario "artemis" y otros datos.
+    16.2. Le damos clic en "EDIT" que esta en la parte derecha y se nos abre un modal.
+    16.3. Buscamos un select llamado "Built-in Role" y le damos clic.
+    16.4. Aparece un nuevo select y escogemos la opción "Atlas admin".
+    16.5. Bajamos al final del modal y le damos clic al boton verde "Update User".
+
+
+17. Consola de MongoDB - Eliminar base de datos.
+    17.1. Realizamos nuevamente el punto 14 pero ya no debe aparecer ese mensaje.
+    17.2. Me aparece el siguiente código: { ok: 1, dropped: 'libreria' } , eso quiere decir, que ha sido eliminada.
+
+
+18. Vamos a MongoDB Compass
+    18.1. Le damos clic al icono de "Refresh databases" en el menú de la izquierda. En seguida observamos como desaparece la base de datos "libreria".
+
+
+
+
+    
+    
+        

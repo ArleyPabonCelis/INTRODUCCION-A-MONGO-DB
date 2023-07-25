@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "64b717e2db0155a683cd42b4"
+  },
+  "nombre": "El chico de las fiestas",
+  "autor": "Alejandri Medina Villareal",
+  "precio": "$ 70.000",
+  "descripcion": "La historia de Sansón"
+},
+{
+  "_id": {
+    "$oid": "64b721f4db0155a683cd42b7"
+  },
+  "nombre": "La Señora Pinkerton ha Desaparecido",
+  "autor": "Sergio Aguirre",
+  "precio": "$ 36.000",
+  "descripcion": "Novela juvenil de misterio"
+},
+{
+  "_id": {
+    "$oid": "64b7223ddb0155a683cd42b8"
+  },
+  "nombre": "El muchacho de la boina blanca",
+  "autor": "Albeiro Echavarría",
+  "precio": "$ 30.000",
+  "descripcion": "Una historia de amor"
+},
+{
+  "_id": {
+    "$oid": "64b722bedb0155a683cd42b9"
+  },
+  "nombre": "Mente, Caracter y Personalidad",
+  "autor": "Ellen Gould Harmon",
+  "precio": "$ 62.000",
+  "descripcion": "Un libro para aprender sobre nuestra mente"
+},
+{
+  "_id": {
+    "$oid": "64b72321db0155a683cd42ba"
+  },
+  "nombre": "Cien años de soledad",
+  "autor": "Gabriel García Marquez",
+  "precio": "$ 77.000",
+  "descripcion": "Las mariposas amarillas de Macondo"
+}]
